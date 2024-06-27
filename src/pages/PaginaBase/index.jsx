@@ -1,9 +1,10 @@
 import EstilosGlobais from "../../components/EstilosGlobais";
+import Header from "../../components/Header";
 
 function PaginaBase() {
   return <main>
     <EstilosGlobais />
-    <h1>oi</h1>
+    <Header />
   </main>;
 }
 

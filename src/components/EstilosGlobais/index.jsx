@@ -34,12 +34,14 @@ ol[role='list'] {
 body {
   min-height: 100vh;
   line-height: 1.5;
+  background-color: var(--bg-black);
 }
 
 /* Set shorter line heights on headings and interactive elements */
 h1, h2, h3, h4,
 button, input, label {
   line-height: 1.1;
+  font-family: var(--font);
 }
 
 /* Balance text wrapping on headings */
