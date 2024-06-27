@@ -1,0 +1,11 @@
+:root {
+  --font: "Rubik", sans-serif;
+  --main-azul: #2271D1;
+  --bg-black: #141414;
+  --bg-cinza: #595959;
+  --bg-branco: #FFFFFF;
+}
+
+* {
+  font-family: var(--font);
+}
