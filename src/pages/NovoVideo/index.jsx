@@ -69,6 +69,43 @@ const TextAreaStyle = styled.textarea`
   border-bottom: 2px solid var(--main-azul);
 `;
 
+const ButtonGroup = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+`;
+
+const ButtonGuardar = styled.button`
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--main-azul);
+  color: var(--bg-branco);
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(120%);
+  }
+`;
+
+const ButtonLimpar = styled.button`
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  border: 1px solid red;
+  border-radius: 6px;
+  background-color: transparent;
+  color: red;
+  cursor: pointer;
+
+  &:hover {
+    background-color: red;
+    color: var(--bg-branco);
+  }
+`;
+
 function NovoVideo() {
   return (
     <FormLayout>
@@ -99,6 +136,10 @@ function NovoVideo() {
           <label htmlFor="descricao">Descrição</label>
           <TextAreaStyle name="descricao" id="" rows="6"></TextAreaStyle>
         </InputGroup>
+        <ButtonGroup>
+          <ButtonGuardar>GUARDAR</ButtonGuardar>
+          <ButtonLimpar>LIMPAR</ButtonLimpar>
+        </ButtonGroup>
       </FormArea>
     </FormLayout>
   );
