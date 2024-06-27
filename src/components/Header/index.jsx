@@ -8,6 +8,14 @@ const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    padding: 32px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
 `;
 
 const FlexHorizontal = styled.div`
