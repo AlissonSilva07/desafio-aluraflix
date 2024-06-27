@@ -13,7 +13,7 @@ const FooterStyle = styled.footer`
 function Footer() {
     return (
         <FooterStyle>
-            <p>Aluraflix</p>
+            <p>Aluraflix &#64; 2024</p>
         </FooterStyle>
     )
 }

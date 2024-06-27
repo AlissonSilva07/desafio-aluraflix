@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import BotaoHeader from "../Botoes/BotaoHeader";
-import Logo from '../../assets/Logo.png'
+import Logo from "../../assets/Logo.png";
+import { Link } from "react-router-dom";
 
 const Nav = styled.nav`
   height: 80px;
@@ -19,18 +20,22 @@ const Nav = styled.nav`
 `;
 
 const FlexHorizontal = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 16px;
-`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+`;
 
 function Header() {
   return (
     <Nav>
       <img src={Logo} alt="" />
       <FlexHorizontal>
-        <BotaoHeader text="Home" buttonType={1} />
-        <BotaoHeader text="Novo Vídeo" buttonType={2} />
+        <Link to="/">
+          <BotaoHeader text="Home" buttonType={1} />
+        </Link>
+        <Link to="/novo">
+          <BotaoHeader text="Novo Vídeo" buttonType={2} />
+        </Link>
       </FlexHorizontal>
     </Nav>
   );

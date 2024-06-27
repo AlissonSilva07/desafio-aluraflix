@@ -44,6 +44,10 @@ button, input, label {
   font-family: var(--font);
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Balance text wrapping on headings */
 h1, h2,
 h3, h4 {
