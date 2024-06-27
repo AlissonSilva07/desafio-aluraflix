@@ -4,11 +4,16 @@ const BotaoHome = styled.button`
   display: flex;
   align-items: center;
   padding: 0.8rem;
+  background-color: transparent;
   border: none;
   border-radius: 6px;
-  background-color: var(--bg-cinza);
   color: var(--bg-branco);
   cursor: pointer;
+
+  &:hover {
+    color: var(--bg-branco);
+    background-color: var(--bg-cinza);
+  }
 `;
 
 const BotaoNovoVideo = styled.button`
@@ -20,6 +25,10 @@ const BotaoNovoVideo = styled.button`
   background-color: var(--main-azul);
   color: var(--bg-branco);
   cursor: pointer;
+
+  &:hover {
+    filter: brightness(120%);
+  }
 `;
 
 function BotaoHeader({ text, buttonType }) {
