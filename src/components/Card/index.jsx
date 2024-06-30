@@ -1,6 +1,8 @@
 import IconDeletar from "../../assets/Vector.png";
 import IconEditar from "../../assets/Vector-1.png";
 import styled from "styled-components";
+import { useVideo } from "../../hooks/useVideos";
+import { useNavigate } from "react-router-dom";
 
 const CardStyle = styled.div`
   width: 320px;
@@ -53,7 +55,17 @@ const CardButton = styled.button`
   cursor: pointer;
 `;
 
-function Card({ capa, titulo, descricao }) {
+function Card({ unique, capa, titulo, descricao }) {
+  const { deleteVideo } = useVideo()
+  const navigate = useNavigate()
+
+  const handleDelete = async (id) => {
+    deleteVideo(id).then(data => {
+      console.log(id)
+      navigate('/')
+    }).catch(err => console.log(id, err))
+  }
+
   return (
     <CardStyle>
       <img src={capa} alt="" />
@@ -61,7 +73,7 @@ function Card({ capa, titulo, descricao }) {
         <CardTitle>{titulo}</CardTitle>
         <CardDescricao>{descricao}</CardDescricao>
         <CardButtonGroup>
-          <CardButton>
+          <CardButton onClick={() => handleDelete(unique)}>
             <img src={IconDeletar} alt="Deletar" />
             DELETAR
           </CardButton>

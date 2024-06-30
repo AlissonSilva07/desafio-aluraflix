@@ -29,6 +29,7 @@ function Section({ videos, categoria }) {
             {videosCategoria.map((v) => (
               <Card
                 key={v.id}
+                unique={v.id}
                 titulo={v.titulo}
                 capa={v.capa}
                 link={v.link}

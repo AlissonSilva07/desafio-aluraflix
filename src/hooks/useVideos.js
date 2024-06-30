@@ -16,11 +16,11 @@ export const useVideo = () => {
         await getVideos().then(data => {
             total = data.length
         })
-        return total
+        return total + 1
     }
 
-    const postVideos = async (video) => {
-        video.id = generateID()
+    const postVideo = async (video) => {
+        video.id = await generateID()
         const data = await fetch(`http://localhost:3000/videos`, {
             method: 'POST',
             headers: {
@@ -33,8 +33,8 @@ export const useVideo = () => {
     }
 
 
-    const deleteVideos = async (id) => {
-        const data = await fetch(`http://localhost:3000/videos?id=${id}`, {
+    const deleteVideo = async (id) => {
+        const data = await fetch(`http://localhost:3000/videos/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-type': 'application/json'
@@ -44,7 +44,7 @@ export const useVideo = () => {
         return resp
     }
 
-    const putVideos = async (id, video) => {
+    const putVideo = async (id, video) => {
         const data = await fetch(`http://localhost:3000/videos?id=${id}`, {
             method: 'PUT',
             headers: {
@@ -59,8 +59,8 @@ export const useVideo = () => {
     return {
         getVideos,
         getVideosById,
-        deleteVideos,
-        postVideos,
-        putVideos
+        deleteVideo,
+        postVideo,
+        putVideo
     }
 }

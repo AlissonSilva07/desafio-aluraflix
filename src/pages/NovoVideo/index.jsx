@@ -110,7 +110,7 @@ const ButtonLimpar = styled.button`
 `;
 
 function NovoVideo() {
-  const { postVideos } = useVideo()
+  const { postVideo } = useVideo()
 
   const DEFAULT_FORM = {
     id: 0,
@@ -132,7 +132,7 @@ function NovoVideo() {
 
   const handleSubmit = (e) => {
     e.preventDefault()    
-    postVideos(formData).then(data => {
+    postVideo(formData).then(data => {
       console.log(data)
       navigate('/')
     }).catch(err => console.log(err))
