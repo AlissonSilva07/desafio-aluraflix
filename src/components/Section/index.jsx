@@ -12,8 +12,9 @@ const SectionTitle = styled.h2`
 `;
 
 const CardsGroup = styled.div`
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(1fr, 4);
+  grid-template-columns: repeat(4, 1fr);
 `;
 
 function Section({ videos, categoria }) {
@@ -25,15 +26,15 @@ function Section({ videos, categoria }) {
         <>
           <SectionTitle>{categoria.toUpperCase()}</SectionTitle>
           <CardsGroup>
-            {videosCategoria.map(v => (
-            <Card
-              key={v.id}
-              titulo={v.titulo}
-              capa={v.capa}
-              link={v.link}
-              categoria={v.categoria}
-              descricao={v.descricao}
-            />
+            {videosCategoria.map((v) => (
+              <Card
+                key={v.id}
+                titulo={v.titulo}
+                capa={v.capa}
+                link={v.link}
+                categoria={v.categoria}
+                descricao={v.descricao}
+              />
             ))}
           </CardsGroup>
         </>

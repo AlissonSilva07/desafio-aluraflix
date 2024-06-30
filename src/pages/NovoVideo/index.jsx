@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { useVideo } from "../../hooks/useVideos";
+import { useNavigate } from "react-router-dom";
 
 const FormLayout = styled.div`
   width: 100%;
@@ -127,11 +128,13 @@ function NovoVideo() {
     { value: "mobile", label: "Mobile" },
   ];
 
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault()    
     postVideos(formData).then(data => {
       console.log(data)
+      navigate('/')
     }).catch(err => console.log(err))
   };
 

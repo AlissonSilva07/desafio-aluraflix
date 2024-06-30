@@ -1,0 +1,52 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "titulo": "O que faz uma desenvolvedora front-end?",
+      "capa": "https://i.ytimg.com/vi/ZY3-MFxVdEw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBS9pc6mdYSygHZqcwqBT75vcct9A",
+      "descricao": "O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa nesse episódio!",
+      "link": "https://www.youtube.com/watch?v=ZY3-MFxVdEw",
+      "categoria": "front-end"
+    },
+    {
+      "id": 2,
+      "titulo": "O que faz uma desenvolvedora Back-end? com Juliana Amoasei",
+      "capa": "https://i.ytimg.com/vi/fiPfvylj6rk/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDTpL8dYV4PwLV0Q3OminyZxlRR2Q",
+      "descricao": "Afinal, quem trabalha com Back-end faz o que? Com quais outras áreas da tecnologia essa pessoa acaba se relacionando no dia a dia de trabalho e quais os possíveis caminhos nessa carreira?",
+      "link": "https://www.youtube.com/embed/jK0uiQ1ZQQQ",
+      "categoria": "back-end"
+    },
+    {
+      "id": 3,
+      "titulo": "Desenvolvimento Android",
+      "capa": "https://i.ytimg.com/vi/fWscDFHKgw8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLClfate1Dk0AOfvUtxwVtS-xtn7YA",
+      "descricao": "Um episódio focado no desenvolvimento de aplicações Android. Neste bate-papo, Paulo Silveira e Felipe Torres conversam sobre os primeiros passos para começar a desenvolver, quais as principais ferramentas do desenvolvimento mobile, como colocar sua aplicação no ar e mais!",
+      "link": "https://www.youtube.com/embed/N1BSG02z-Mw",
+      "categoria": "mobile"
+    },
+    {
+      "id": 4,
+      "titulo": "Guia de carreira Front-end",
+      "capa": "https://i.ytimg.com/vi/fpth65ts3cw/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvsZSL2HZddDf0Jo0druhP21HJ9Q",
+      "descricao": "Nesse primeiro episódio, confira o que é front-end e como seguir nessa área da tecnologia, através do Tech Guide front-end, um Guia de Estudos do iniciante ao avançado. São 3 níveis de Profundidade e 1 nível de Expansão, formando seu perfil como Dev Front-End em T.",
+      "link": "https://www.youtube.com/watch?v=fpth65ts3cw",
+      "categoria": "front-end"
+    },
+    {
+      "id": 0,
+      "titulo": "O que é Front End e Back End? Diferenças que Você Precisa Saber",
+      "capa": "https://i.ytimg.com/vi/LDU4BCSxPp4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB3PFMU_--7C2EWMAnx3cpoJrfzjQ",
+      "descricao": "Acompanhe Guilherme Lima e Vinícius Neves, instrutores da Alura e experientes desenvolvedores, enquanto exploramos as bases dessas áreas e oferecemos dicas essenciais para iniciar sua jornada. Conheça as linguagens de programação Front End e Back End e as opções de cursos disponíveis. Pronto para mergulhar no universo do desenvolvimento web? Não perca esta oportunidade de aprendizado!",
+      "link": "https://www.youtube.com/watch?v=LDU4BCSxPp4",
+      "categoria": "back-end"
+    },
+    {
+      "id": 0,
+      "titulo": "  Mercado Livre Brasil www.mercadolivre.com.br  Saiba mais Patrocinado: 1 de 2 · 0:01  mercadolivre.com.br O vídeo já vai começar   0:04 / 0:06   Híbridos: Flutter e React Native | Desmistificando Mobile",
+      "capa": "https://i.ytimg.com/vi/vf9P_PycgRw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDz9agn1XYwrKiVQ3spg8ChRKsNWA",
+      "descricao": "Depois de entender sobre as linguagens de programação nativas, Helô vai conversar com a Natalia Thiel e o Caio Couto sobre Flutter e React Native, que são linguagens híbridas e que possibilitam outros caminhos para os aplicativos de celular",
+      "link": "https://www.youtube.com/watch?v=vf9P_PycgRw",
+      "categoria": "mobile"
+    }
+  ]
+}

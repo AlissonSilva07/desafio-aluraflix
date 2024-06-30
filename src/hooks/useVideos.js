@@ -1,18 +1,27 @@
 export const useVideo = () => {
     const getVideos = async () => {
-        const data = await fetch('https://my-json-server.typicode.com/AlissonSilva07/desafio-aluraflix-api/videos')
+        const data = await fetch('http://localhost:3000/videos')
         const resp = await data.json()
         return resp
     }
 
     const getVideosById = async () => {
-        const data = await fetch('https://my-json-server.typicode.com/AlissonSilva07/desafio-aluraflix-api/videos?id=${id}')
+        const data = await fetch('http://localhost:3000/videos?id=${id}')
         const resp = await data.json()
         return resp
     }
 
+    const generateID = async () => {
+        let total;
+        await getVideos().then(data => {
+            total = data.length
+        })
+        return total
+    }
+
     const postVideos = async (video) => {
-        const data = await fetch(`https://my-json-server.typicode.com/AlissonSilva07/desafio-aluraflix-api/videos`, {
+        video.id = generateID()
+        const data = await fetch(`http://localhost:3000/videos`, {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
@@ -25,7 +34,7 @@ export const useVideo = () => {
 
 
     const deleteVideos = async (id) => {
-        const data = await fetch(`https://my-json-server.typicode.com/AlissonSilva07/desafio-aluraflix-api/videos?id=${id}`, {
+        const data = await fetch(`http://localhost:3000/videos?id=${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-type': 'application/json'
@@ -36,7 +45,7 @@ export const useVideo = () => {
     }
 
     const putVideos = async (id, video) => {
-        const data = await fetch(`https://my-json-server.typicode.com/AlissonSilva07/desafio-aluraflix-api/videos?id=${id}`, {
+        const data = await fetch(`http://localhost:3000/videos?id=${id}`, {
             method: 'PUT',
             headers: {
                 'Content-type': 'application/json'
