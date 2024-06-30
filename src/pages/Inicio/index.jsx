@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Hero from "../../components/Hero";
 
 const InicioStyle = styled.main`
   width: 100%;
@@ -8,7 +9,11 @@ const InicioStyle = styled.main`
 `;
 
 function Inicio() {
-  return <InicioStyle>Inicio</InicioStyle>;
+  return (
+    <InicioStyle>
+      <Hero />
+    </InicioStyle>
+  );
 }
 
 export default Inicio;
