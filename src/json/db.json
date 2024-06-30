@@ -4,6 +4,7 @@
             "id": 1,
             "titulo": "O que faz uma desenvolvedora front-end?",
             "capa": "https://i.ytimg.com/vi/ZY3-MFxVdEw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBS9pc6mdYSygHZqcwqBT75vcct9A",
+            "descricao": "",
             "link": "https://www.youtube.com/watch?v=ZY3-MFxVdEw",
             "categoria": "front-end"
         },
@@ -11,6 +12,7 @@
             "id": 2,
             "titulo": "O que faz uma desenvolvedora Back-end? com Juliana Amoasei",
             "capa": "https://i.ytimg.com/vi/fiPfvylj6rk/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDTpL8dYV4PwLV0Q3OminyZxlRR2Q",
+            "descricao": "",
             "link": "https://www.youtube.com/embed/jK0uiQ1ZQQQ",
             "categoria": "back-end"
         },
@@ -18,6 +20,7 @@
             "id": 3,
             "titulo": "Desenvolvimento Android",
             "capa": "https://i.ytimg.com/vi/fWscDFHKgw8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLClfate1Dk0AOfvUtxwVtS-xtn7YA",
+            "descricao": "Um episódio focado no desenvolvimento de aplicações Android. Neste bate-papo, Paulo Silveira e Felipe Torres conversam sobre os primeiros passos para começar a desenvolver, quais as principais ferramentas do desenvolvimento mobile, como colocar sua aplicação no ar e mais!",
             "link": "https://www.youtube.com/embed/N1BSG02z-Mw",
             "categoria": "mobile"
         }
