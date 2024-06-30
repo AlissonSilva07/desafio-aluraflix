@@ -1,4 +1,6 @@
+import { useState } from "react";
 import styled from "styled-components";
+import { useVideo } from "../../hooks/useVideos";
 
 const FormLayout = styled.div`
   width: 100%;
@@ -40,7 +42,7 @@ const InputStyle = styled.input`
   display: flex;
   justify-content: center;
   background-color: transparent;
-  color: var(--bg-cinza);
+  color: var(--bg-branco);
   border: none;
   border-bottom: 2px solid var(--main-azul);
 `;
@@ -52,7 +54,7 @@ const SelectStyle = styled.select`
   display: flex;
   justify-content: center;
   background-color: transparent;
-  color: var(--bg-cinza);
+  color: var(--bg-branco);
   border: none;
   border-bottom: 2px solid var(--main-azul);
 `;
@@ -64,7 +66,7 @@ const TextAreaStyle = styled.textarea`
   display: flex;
   justify-content: center;
   background-color: transparent;
-  color: var(--bg-cinza);
+  color: var(--bg-branco);
   border: none;
   border-bottom: 2px solid var(--main-azul);
 `;
@@ -107,38 +109,79 @@ const ButtonLimpar = styled.button`
 `;
 
 function NovoVideo() {
+  const { postVideos } = useVideo()
+
+  const DEFAULT_FORM = {
+    id: 0,
+    titulo: "",
+    capa: "",
+    descricao: "",
+    link: "",
+    categoria: "",
+  }
+  const [ formData, setFormData ] = useState(DEFAULT_FORM);
+
+  const opcoes = [
+    { value: "front-end", label: "Front-End" },
+    { value: "back-end", label: "Back-End" },
+    { value: "mobile", label: "Mobile" },
+  ];
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault()    
+    postVideos(formData).then(data => {
+      console.log(data)
+    }).catch(err => console.log(err))
+  };
+
+  const handleInput = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  }
+
+  const handleLimpaForm = () => {
+    setFormData(DEFAULT_FORM)
+  }
+
   return (
     <FormLayout>
       <TitleStyle>Novo Vídeo</TitleStyle>
       <SubtitleStyle>
         Complete o formulário para criar um novo vídeo.
       </SubtitleStyle>
-      <FormArea action="">
+      <FormArea onSubmit={handleSubmit}>
         <InputGroup>
           <label htmlFor="titulo">Título</label>
-          <InputStyle type="text" name="titulo" placeholder="Ex.: Teste" />
+          <InputStyle type="text" onChange={handleInput} value={formData.titulo} name="titulo" placeholder="Ex.: Teste" />
         </InputGroup>
         <InputGroup>
           <label htmlFor="categoria">Categoria</label>
-          <SelectStyle name="categoria" id="">
-            <option value="1">Cat</option>
+          <SelectStyle name="categoria" onChange={handleInput} value={formData.categoria}>
+              <option>Selecione uma Categoria</option>
+              {opcoes && opcoes.map(o => (
+                <option key={o.label} value={o.value}>{o.label}</option>
+              ))}
           </SelectStyle>
         </InputGroup>
         <InputGroup>
           <label htmlFor="imagem">Imagem</label>
-          <InputStyle type="text" name="imagem" placeholder="Ex.: Teste" />
+          <InputStyle type="text" onChange={handleInput} value={formData.capa} name="capa" placeholder="Ex.: Teste" />
         </InputGroup>
         <InputGroup>
           <label htmlFor="video">Video</label>
-          <InputStyle type="text" name="video" placeholder="Ex.: Teste" />
+          <InputStyle type="text" onChange={handleInput} value={formData.link} name="link" placeholder="Ex.: Teste" />
         </InputGroup>
         <InputGroup>
           <label htmlFor="descricao">Descrição</label>
-          <TextAreaStyle name="descricao" id="" rows="6"></TextAreaStyle>
+          <TextAreaStyle name="descricao" onChange={handleInput} value={formData.descricao} id="" rows="6"></TextAreaStyle>
         </InputGroup>
         <ButtonGroup>
-          <ButtonGuardar>GUARDAR</ButtonGuardar>
-          <ButtonLimpar>LIMPAR</ButtonLimpar>
+          <ButtonGuardar type="submit">GUARDAR</ButtonGuardar>
+          <ButtonLimpar onClick={handleLimpaForm}>LIMPAR</ButtonLimpar>
         </ButtonGroup>
       </FormArea>
     </FormLayout>

@@ -21,10 +21,11 @@ function Section({ videos, categoria }) {
 
   return (
     <SectionStyle>
-      <SectionTitle>{categoria.toUpperCase()}</SectionTitle>
-      <CardsGroup>
-        {videosCategoria &&
-          videosCategoria.map((v) => (
+      {videosCategoria && (
+        <>
+          <SectionTitle>{categoria.toUpperCase()}</SectionTitle>
+          <CardsGroup>
+            {videosCategoria.map(v => (
             <Card
               key={v.id}
               titulo={v.titulo}
@@ -33,8 +34,10 @@ function Section({ videos, categoria }) {
               categoria={v.categoria}
               descricao={v.descricao}
             />
-          ))}
-      </CardsGroup>
+            ))}
+          </CardsGroup>
+        </>
+      )}
     </SectionStyle>
   );
 }
