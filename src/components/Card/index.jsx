@@ -3,9 +3,12 @@ import IconEditar from "../../assets/Vector-1.png";
 import styled from "styled-components";
 import { useVideo } from "../../hooks/useVideos";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useContext } from "react";
+import { ModalContext } from "../../context/ModalContext";
+
 
 const CardStyle = styled.div`
+  position: relative;
   width: 320px;
   display: flex;
   flex-direction: column;
@@ -69,6 +72,7 @@ const IconStyle = styled.img`
 function Card({ unique, capa, titulo, descricao }) {
   const { deleteVideo } = useVideo();
   const navigate = useNavigate();
+  const { handleOpenModal } = useContext(ModalContext)
 
   const handleDelete = async (id) => {
     deleteVideo(id)
@@ -77,25 +81,27 @@ function Card({ unique, capa, titulo, descricao }) {
       })
       .catch((err) => console.log(id, err));
   };
-  
+
   return (
-    <CardStyle>
-      <img src={capa} alt="" />
-      <CardInfoGroup>
-        <CardTitle>{titulo}</CardTitle>
-        <CardDescricao>{descricao}</CardDescricao>
-        <CardButtonGroup>
-          <CardButton onClick={() => handleDelete(unique)}>
-            <IconStyle src={IconDeletar} alt="Deletar" />
-            DELETAR
-          </CardButton>
-          <CardButton>
-            <IconStyle src={IconEditar} alt="Editar" />
-            EDITAR
-          </CardButton>
-        </CardButtonGroup>
-      </CardInfoGroup>
-    </CardStyle>
+    <>
+      <CardStyle>
+        <img src={capa} alt="" />
+        <CardInfoGroup>
+          <CardTitle>{titulo}</CardTitle>
+          <CardDescricao>{descricao}</CardDescricao>
+          <CardButtonGroup>
+            <CardButton onClick={() => handleDelete(unique)}>
+              <IconStyle src={IconDeletar} alt="Deletar" />
+              DELETAR
+            </CardButton>
+            <CardButton onClick={() => {handleOpenModal(unique)}}>
+              <IconStyle src={IconEditar} alt="Editar" />
+              EDITAR
+            </CardButton>
+          </CardButtonGroup>
+        </CardInfoGroup>
+      </CardStyle>
+    </>
   );
 }
 

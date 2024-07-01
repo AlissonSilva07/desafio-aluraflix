@@ -15,6 +15,14 @@
       "descricao": "Afinal, quem trabalha com Back-end faz o que? Com quais outras áreas da tecnologia essa pessoa acaba se relacionando no dia a dia de trabalho e quais os possíveis caminhos nessa carreira?",
       "link": "https://www.youtube.com/embed/jK0uiQ1ZQQQ",
       "categoria": "back-end"
+    },
+    {
+      "id": "3",
+      "titulo": "Desmistificando Mobile- Por onde eu começo? #01",
+      "capa": "https://i.ytimg.com/vi/2z6f8VN_Pro/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvkptlgJE41DQGkIcR3et2yhHxqw",
+      "descricao": "ragreya",
+      "link": "https://www.youtube.com/watch?v=2z6f8VN_Pro",
+      "categoria": "mobile"
     }
   ]
 }

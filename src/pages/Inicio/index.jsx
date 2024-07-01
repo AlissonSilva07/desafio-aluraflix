@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import Hero from "../../components/Hero";
 import Section from "../../components/Section";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useVideo } from "../../hooks/useVideos";
+import ModalEditarVideo from '../../components/ModalEditarVideo/index'
+import { ModalContext } from "../../context/ModalContext";
 
 const InicioStyle = styled.main`
   width: 100%;
@@ -15,6 +17,7 @@ const InicioStyle = styled.main`
 function Inicio() {
   const { getVideos } = useVideo();
   const [videos, setVideos] = useState([]);
+  const { showModal, idVideoEdit } = useContext(ModalContext)
 
   useEffect(() => {
     getVideos()
@@ -30,6 +33,8 @@ function Inicio() {
       <Section videos={videos} categoria="front-end" />
       <Section videos={videos} categoria="back-end" />
       <Section videos={videos} categoria="mobile" />
+
+      {showModal && <ModalEditarVideo idVideo={idVideoEdit} />}
     </InicioStyle>
   );
 }

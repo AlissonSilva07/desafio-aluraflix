@@ -5,8 +5,8 @@ export const useVideo = () => {
         return resp
     }
 
-    const getVideosById = async () => {
-        const data = await fetch('http://localhost:3000/videos?id=${id}')
+    const getVideosById = async (id) => {
+        const data = await fetch(`http://localhost:3000/videos/${id}`)
         const resp = await data.json()
         return resp
     }
@@ -46,7 +46,7 @@ export const useVideo = () => {
     }
 
     const putVideo = async (id, video) => {
-        const data = await fetch(`http://localhost:3000/videos?id=${id}`, {
+        const data = await fetch(`http://localhost:3000/videos/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-type': 'application/json'
