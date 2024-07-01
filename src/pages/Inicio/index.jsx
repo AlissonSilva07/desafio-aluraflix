@@ -13,7 +13,7 @@ const InicioStyle = styled.main`
 `;
 
 function Inicio() {
-  const { getVideos, deleteVideos } = useVideo();
+  const { getVideos } = useVideo();
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {

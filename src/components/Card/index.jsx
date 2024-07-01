@@ -3,6 +3,7 @@ import IconEditar from "../../assets/Vector-1.png";
 import styled from "styled-components";
 import { useVideo } from "../../hooks/useVideos";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const CardStyle = styled.div`
   width: 320px;
@@ -44,6 +45,7 @@ const CardButtonGroup = styled.div`
 
 const CardButton = styled.button`
   flex: 1;
+  padding: 0.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,20 +54,30 @@ const CardButton = styled.button`
   color: var(--bg-branco);
   outline: none;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
+
+  &:hover {
+    background-color: var(--bg-cinza);
+  }
+`;
+
+const IconStyle = styled.img`
+  width: 18px;
 `;
 
 function Card({ unique, capa, titulo, descricao }) {
-  const { deleteVideo } = useVideo()
-  const navigate = useNavigate()
+  const { deleteVideo } = useVideo();
+  const navigate = useNavigate();
 
   const handleDelete = async (id) => {
-    deleteVideo(id).then(data => {
-      console.log(id)
-      navigate('/')
-    }).catch(err => console.log(id, err))
-  }
-
+    deleteVideo(id)
+      .then((data) => {
+        navigate("/");
+      })
+      .catch((err) => console.log(id, err));
+  };
+  
   return (
     <CardStyle>
       <img src={capa} alt="" />
@@ -74,11 +86,11 @@ function Card({ unique, capa, titulo, descricao }) {
         <CardDescricao>{descricao}</CardDescricao>
         <CardButtonGroup>
           <CardButton onClick={() => handleDelete(unique)}>
-            <img src={IconDeletar} alt="Deletar" />
+            <IconStyle src={IconDeletar} alt="Deletar" />
             DELETAR
           </CardButton>
           <CardButton>
-            <img src={IconEditar} alt="Editar" />
+            <IconStyle src={IconEditar} alt="Editar" />
             EDITAR
           </CardButton>
         </CardButtonGroup>

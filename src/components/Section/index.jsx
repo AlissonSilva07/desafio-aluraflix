@@ -22,7 +22,7 @@ function Section({ videos, categoria }) {
 
   return (
     <SectionStyle>
-      {videosCategoria && (
+      {videosCategoria.length > 0 && (
         <>
           <SectionTitle>{categoria.toUpperCase()}</SectionTitle>
           <CardsGroup>

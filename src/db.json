@@ -1,7 +1,7 @@
 {
   "videos": [
     {
-      "id": 1,
+      "id": "1",
       "titulo": "O que faz uma desenvolvedora front-end?",
       "capa": "https://i.ytimg.com/vi/ZY3-MFxVdEw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBS9pc6mdYSygHZqcwqBT75vcct9A",
       "descricao": "O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa nesse episódio!",
@@ -9,28 +9,12 @@
       "categoria": "front-end"
     },
     {
-      "id": 2,
+      "id": "2",
       "titulo": "O que faz uma desenvolvedora Back-end? com Juliana Amoasei",
       "capa": "https://i.ytimg.com/vi/fiPfvylj6rk/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDTpL8dYV4PwLV0Q3OminyZxlRR2Q",
       "descricao": "Afinal, quem trabalha com Back-end faz o que? Com quais outras áreas da tecnologia essa pessoa acaba se relacionando no dia a dia de trabalho e quais os possíveis caminhos nessa carreira?",
       "link": "https://www.youtube.com/embed/jK0uiQ1ZQQQ",
       "categoria": "back-end"
-    },
-    {
-      "id": 3,
-      "titulo": "Desenvolvimento Android",
-      "capa": "https://i.ytimg.com/vi/fWscDFHKgw8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLClfate1Dk0AOfvUtxwVtS-xtn7YA",
-      "descricao": "Um episódio focado no desenvolvimento de aplicações Android. Neste bate-papo, Paulo Silveira e Felipe Torres conversam sobre os primeiros passos para começar a desenvolver, quais as principais ferramentas do desenvolvimento mobile, como colocar sua aplicação no ar e mais!",
-      "link": "https://www.youtube.com/embed/N1BSG02z-Mw",
-      "categoria": "mobile"
-    },
-    {
-      "id": 4,
-      "titulo": "Guia de carreira Front-end",
-      "capa": "https://i.ytimg.com/vi/fpth65ts3cw/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvsZSL2HZddDf0Jo0druhP21HJ9Q",
-      "descricao": "adadad",
-      "link": "https://www.youtube.com/watch?v=fpth65ts3cw",
-      "categoria": "front-end"
     }
   ]
 }

@@ -20,7 +20,8 @@ export const useVideo = () => {
     }
 
     const postVideo = async (video) => {
-        video.id = await generateID()
+        let newId = await generateID()
+        video.id = newId.toString() 
         const data = await fetch(`http://localhost:3000/videos`, {
             method: 'POST',
             headers: {
