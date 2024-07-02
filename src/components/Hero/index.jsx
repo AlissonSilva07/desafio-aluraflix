@@ -10,6 +10,10 @@ const HeroStyle = styled.section`
   @media (max-width: 768px) {
     flex-direction: column;
   }
+
+  @media (max-width: 480px) {
+    gap: 16px;
+  }
 `;
 
 const HeroImg = styled.img`
@@ -38,6 +42,10 @@ const HeroTitle = styled.p`
 
   @media (max-width: 768px) {
     text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 36;
   }
 `;
 

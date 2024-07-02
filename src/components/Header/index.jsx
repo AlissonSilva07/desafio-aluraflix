@@ -13,6 +13,10 @@ const Nav = styled.nav`
   @media (max-width: 768px) {
     padding: 0px 32px;
   }
+
+  @media (max-width: 480px) {
+    padding: 16px;
+  }
 `;
 
 const FlexHorizontal = styled.div`

@@ -34,6 +34,10 @@ const ModalBody = styled.div`
   @media (max-width: 768px) {
     width: 80%;
   }
+
+  @media (max-width: 480px) {
+    width: 90%;
+  }
 `;
 
 const ButtonFechar = styled.button`
@@ -56,6 +60,10 @@ const FormLayout = styled.div`
 
   @media (max-width: 768px) {
     padding: 32px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 32px 16px;
   }
 `;
 

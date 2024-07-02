@@ -37,6 +37,10 @@ const FormArea = styled.form`
   @media (max-width: 768px) {
     width: 80%;
   }
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 const InputGroup = styled.div`

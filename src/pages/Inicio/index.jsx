@@ -16,6 +16,10 @@ const InicioStyle = styled.main`
   @media (max-width: 768px) {
     padding: 32px;
   }
+
+  @media (max-width: 480px) {
+    padding: 16px;
+  }
 `;
 
 function Inicio() {
