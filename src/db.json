@@ -1,7 +1,7 @@
 {
   "videos": [
     {
-      "id": "1",
+      "id": "84fbe2c1-2597-445a-b297-00b8fbc841e7",
       "titulo": "O que faz uma desenvolvedora front-end?",
       "capa": "https://i.ytimg.com/vi/ZY3-MFxVdEw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBS9pc6mdYSygHZqcwqBT75vcct9A",
       "descricao": "O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa nesse episódio!",
@@ -9,7 +9,7 @@
       "categoria": "front-end"
     },
     {
-      "id": "2",
+      "id": "884d885a-0693-4ab7-967d-7e6c5bf06dc5",
       "titulo": "O que faz uma desenvolvedora Back-end? com Juliana Amoasei",
       "capa": "https://i.ytimg.com/vi/fiPfvylj6rk/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDTpL8dYV4PwLV0Q3OminyZxlRR2Q",
       "descricao": "Afinal, quem trabalha com Back-end faz o que? Com quais outras áreas da tecnologia essa pessoa acaba se relacionando no dia a dia de trabalho e quais os possíveis caminhos nessa carreira?",
@@ -17,11 +17,35 @@
       "categoria": "back-end"
     },
     {
-      "id": "3",
+      "id": "11fae059-49cc-454b-8852-d973f0626a41",
+      "titulo": "Guia de carreira Front-end",
+      "capa": "https://i.ytimg.com/vi/fpth65ts3cw/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvsZSL2HZddDf0Jo0druhP21HJ9Q",
+      "descricao": "Nova temporada de Hipsters.tube no ar e agora com foco em carreira! 🎊",
+      "link": "https://www.youtube.com/watch?v=fpth65ts3cw",
+      "categoria": "front-end"
+    },
+    {
+      "id": "139e1c45-fdbe-499a-acab-d233dccd0257",
+      "titulo": "Diferença entre Back-End e Front-End com Mario Souto",
+      "capa": "https://i.ytimg.com/vi/xrRy3RI3HE4/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDRKxjDOsgYFSs5VcYzTGOaZDcYdQ",
+      "descricao": "Qual a diferença entre Back-end e Front-end? É possível se especializar nas duas áreas? Como é a rotina desses profissionais e com quais outras áreas da tecnologia acabam se relacionando?",
+      "link": "https://www.youtube.com/watch?v=xrRy3RI3HE4",
+      "categoria": "back-end"
+    },
+    {
+      "id": "66ab2c7c-0542-496b-9926-375455a66a1f",
+      "titulo": "Desenvolvimento Android",
+      "capa": "https://i.ytimg.com/vi/fWscDFHKgw8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLClfate1Dk0AOfvUtxwVtS-xtn7YA",
+      "descricao": "Um episódio focado no desenvolvimento de aplicações Android. Neste bate-papo, Paulo Silveira e Felipe Torres conversam sobre os primeiros passos para começar a desenvolver, quais as principais ferramentas do desenvolvimento mobile, como colocar sua aplicação no ar e mais! ",
+      "link": "https://www.youtube.com/watch?v=fWscDFHKgw8",
+      "categoria": "mobile"
+    },
+    {
+      "id": "83277868-22c4-42cf-bd11-6d134bf93b1f",
       "titulo": "Desmistificando Mobile- Por onde eu começo? #01",
       "capa": "https://i.ytimg.com/vi/2z6f8VN_Pro/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvkptlgJE41DQGkIcR3et2yhHxqw",
-      "descricao": "ragreya",
-      "link": "https://www.youtube.com/watch?v=2z6f8VN_Pro",
+      "descricao": "A Websérie “Desmistificando o mobile” vêm aí para simplificar com exemplos práticos vários assuntos envolvendo o mundo dos aplicativos de celular e neste primeiro episódio vamos partir, literalmente, do começo, por onde começar a estudar sobre o mundo dos apps? Os instrutores da escola de mobile da Alura nos ajudam com essa tarefa 😉",
+      "link": "https://www.youtube.com/watch?v=2z6f8VN_Pro&t=1s",
       "categoria": "mobile"
     }
   ]

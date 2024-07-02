@@ -1,7 +1,7 @@
-import { useState } from "react";
 import styled from "styled-components";
 import { useVideo } from "../../hooks/useVideos";
 import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 const FormLayout = styled.div`
   width: 100%;
@@ -46,6 +46,11 @@ const InputStyle = styled.input`
   color: var(--bg-branco);
   border: none;
   border-bottom: 2px solid var(--main-azul);
+`;
+
+const ErrorInput = styled.span`
+  color: red;
+  font-size: 12px;
 `;
 
 const SelectStyle = styled.select`
@@ -110,17 +115,7 @@ const ButtonLimpar = styled.button`
 `;
 
 function NovoVideo() {
-  const { postVideo } = useVideo()
-
-  const DEFAULT_FORM = {
-    id: 0,
-    titulo: "",
-    capa: "",
-    descricao: "",
-    link: "",
-    categoria: "",
-  }
-  const [ formData, setFormData ] = useState(DEFAULT_FORM);
+  const { postVideo } = useVideo();
 
   const opcoes = [
     { value: "front-end", label: "Front-End" },
@@ -128,27 +123,21 @@ function NovoVideo() {
     { value: "mobile", label: "Mobile" },
   ];
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault()    
-    postVideo(formData).then(data => {
-      console.log(data)
-      navigate('/')
-    }).catch(err => console.log(err))
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+    postVideo(formData)
+      .then((data) => {
+        navigate("/");
+      })
+      .catch((err) => console.log(err));
   };
-
-  const handleInput = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
-  }
-
-  const handleLimpaForm = () => {
-    setFormData(DEFAULT_FORM)
-  }
 
   return (
     <FormLayout>
@@ -156,35 +145,75 @@ function NovoVideo() {
       <SubtitleStyle>
         Complete o formulário para criar um novo vídeo.
       </SubtitleStyle>
-      <FormArea onSubmit={handleSubmit}>
+      <FormArea onSubmit={handleSubmit(onSubmit)}>
         <InputGroup>
           <label htmlFor="titulo">Título</label>
-          <InputStyle type="text" onChange={handleInput} value={formData.titulo} name="titulo" placeholder="Ex.: Teste" />
+          <InputStyle
+            {...register("titulo", { required: true })}
+            aria-invalid={errors.titulo ? "true" : "false"}
+            type="text"
+            name="titulo"
+            placeholder="Ex.: Título do vídeo"
+          />
+          {errors.titulo?.type === "required" && (
+            <ErrorInput role="alert">O titulo obrigatório.</ErrorInput>
+          )}
         </InputGroup>
         <InputGroup>
           <label htmlFor="categoria">Categoria</label>
-          <SelectStyle name="categoria" onChange={handleInput} value={formData.categoria}>
-              <option>Selecione uma Categoria</option>
-              {opcoes && opcoes.map(o => (
-                <option key={o.label} value={o.value}>{o.label}</option>
+          <SelectStyle
+            {...register("categoria", { required: true })}
+            aria-invalid={errors.categoria ? "true" : "false"}
+          >
+            {opcoes &&
+              opcoes.map((o) => (
+                <option key={o.label} value={o.value}>
+                  {o.label}
+                </option>
               ))}
           </SelectStyle>
+          {errors.categoria?.type === "required" && (
+            <ErrorInput role="alert">Campo obrigatório.</ErrorInput>
+          )}
         </InputGroup>
         <InputGroup>
           <label htmlFor="imagem">Imagem</label>
-          <InputStyle type="text" onChange={handleInput} value={formData.capa} name="capa" placeholder="Ex.: Teste" />
+          <InputStyle
+            type="text"
+            placeholder="Ex.: https://i.ytimg.com/vi/fWscDFHKgw8/hq720.jpg"
+            {...register("capa", { required: true })}
+            aria-invalid={errors.capa ? "true" : "false"}
+          />
+          {errors.capa?.type === "required" && (
+            <ErrorInput role="alert">
+              O link da imagem é obrigatório.
+            </ErrorInput>
+          )}
         </InputGroup>
         <InputGroup>
           <label htmlFor="video">Video</label>
-          <InputStyle type="text" onChange={handleInput} value={formData.link} name="link" placeholder="Ex.: Teste" />
+          <InputStyle
+            type="text"
+            placeholder="Ex.: https://www.youtube.com/watch?v=R0BrkAsjfIQ"
+            {...register("link", { required: true })}
+            aria-invalid={errors.link ? "true" : "false"}
+          />
+          {errors.link?.type === "required" && (
+            <ErrorInput role="alert">O link do vídeo é obrigatório.</ErrorInput>
+          )}
         </InputGroup>
         <InputGroup>
           <label htmlFor="descricao">Descrição</label>
-          <TextAreaStyle name="descricao" onChange={handleInput} value={formData.descricao} id="" rows="6"></TextAreaStyle>
+          <TextAreaStyle
+            {...register("descricao", { required: false })}
+            id=""
+            rows="6"
+            placeholder="Ex.: Descrição do vídeo"
+          ></TextAreaStyle>
         </InputGroup>
         <ButtonGroup>
           <ButtonGuardar type="submit">GUARDAR</ButtonGuardar>
-          <ButtonLimpar onClick={handleLimpaForm}>LIMPAR</ButtonLimpar>
+          <ButtonLimpar>LIMPAR</ButtonLimpar>
         </ButtonGroup>
       </FormArea>
     </FormLayout>

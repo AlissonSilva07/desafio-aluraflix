@@ -76,8 +76,9 @@ function Card({ unique, capa, titulo, descricao }) {
 
   const handleDelete = async (id) => {
     deleteVideo(id)
-      .then((data) => {
-        navigate("/");
+      .then(data => {
+        console.log(data)
+        navigate("/")
       })
       .catch((err) => console.log(id, err));
   };

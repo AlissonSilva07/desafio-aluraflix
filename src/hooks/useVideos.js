@@ -11,16 +11,8 @@ export const useVideo = () => {
         return resp
     }
 
-    const generateID = async () => {
-        let total;
-        await getVideos().then(data => {
-            total = data.length
-        })
-        return total + 1
-    }
-
     const postVideo = async (video) => {
-        let newId = await generateID()
+        let newId = crypto.randomUUID()
         video.id = newId.toString() 
         const data = await fetch(`http://localhost:3000/videos`, {
             method: 'POST',
