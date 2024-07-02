@@ -11,11 +11,7 @@ const Nav = styled.nav`
   justify-content: space-between;
 
   @media (max-width: 768px) {
-    padding: 32px;
-  }
-
-  @media (max-width: 768px) {
-    padding: 16px;
+    padding: 0px 32px;
   }
 `;
 

@@ -30,6 +30,10 @@ const ModalBody = styled.div`
   border: 1px solid var(--bg-cinza);
   border-radius: 6px;
   box-shadow: 3px 3px rgba(255, 255, 255, 0.2);
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 const ButtonFechar = styled.button`
@@ -49,6 +53,10 @@ const FormLayout = styled.div`
   align-items: center;
   gap: 32px;
   padding: 32px 120px;
+
+  @media (max-width: 768px) {
+    padding: 32px;
+  }
 `;
 
 const TitleStyle = styled.h1`
@@ -93,7 +101,7 @@ const SelectStyle = styled.select`
   padding: 0.8rem;
   display: flex;
   justify-content: center;
-  background-color: transparent;
+  background-color: var(--bg-black);
   color: var(--bg-branco);
   border: none;
   border-bottom: 2px solid var(--main-azul);

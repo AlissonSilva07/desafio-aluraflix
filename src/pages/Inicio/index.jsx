@@ -12,6 +12,10 @@ const InicioStyle = styled.main`
   flex-direction: column;
   gap: 32px;
   padding: 0px 120px;
+
+  @media (max-width: 768px) {
+    padding: 32px;
+  }
 `;
 
 function Inicio() {

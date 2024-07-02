@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Card from "../Card";
+import React, { useRef } from "react";
 
 const SectionStyle = styled.section`
   display: flex;
@@ -21,12 +22,35 @@ const SectionTitle = styled.div`
 
 const CardsGroup = styled.div`
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  overflow-x: scroll;
+
+  @media (max-width: 768px) {
+    gap: 16px;
+  }
 `;
 
 function Section({ videos, categoria }) {
   const videosCategoria = videos.filter((v) => v.categoria === categoria);
+  const cardsRef = useRef(null);
+  const currentIndex = useRef(0);
+
+  const handlePrev = () => {
+    if (currentIndex.current > 0) {
+      currentIndex.current -= 1;
+      cardsRef.current.style.transform = `translateX(-${currentIndex.current * 300}px)`;
+    }
+  };
+
+  const handleNext = () => {
+    if (currentIndex.current < cards.length - 1) {
+      currentIndex.current += 1;
+      cardsRef.current.style.transform = `translateX(-${currentIndex.current * 300}px)`;
+    }
+  };
 
   return (
     <SectionStyle>
@@ -45,7 +69,7 @@ function Section({ videos, categoria }) {
           >
             {categoria.toUpperCase()}
           </SectionTitle>
-          <CardsGroup>
+          <CardsGroup ref={cardsRef}>
             {videosCategoria.map((v) => (
               <Card
                 key={v.id}

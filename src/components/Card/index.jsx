@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 const CardStyle = styled.div`
   position: relative;
   width: 320px;
+  min-width: 320px;
   display: flex;
   flex-direction: column;
   gap: 4px;

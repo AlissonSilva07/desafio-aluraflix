@@ -10,6 +10,10 @@ const FormLayout = styled.div`
   align-items: center;
   gap: 32px;
   padding: 32px 120px;
+
+  @media (max-width: 768px) {
+    padding: 32px;
+  }
 `;
 
 const TitleStyle = styled.h1`
@@ -29,6 +33,10 @@ const FormArea = styled.form`
   align-items: center;
   gap: 16px;
   color: var(--bg-branco);
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 const InputGroup = styled.div`

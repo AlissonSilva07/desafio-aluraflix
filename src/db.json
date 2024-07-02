@@ -47,6 +47,14 @@
       "descricao": "A Websérie “Desmistificando o mobile” vêm aí para simplificar com exemplos práticos vários assuntos envolvendo o mundo dos aplicativos de celular e neste primeiro episódio vamos partir, literalmente, do começo, por onde começar a estudar sobre o mundo dos apps? Os instrutores da escola de mobile da Alura nos ajudam com essa tarefa 😉",
       "link": "https://www.youtube.com/watch?v=2z6f8VN_Pro&t=1s",
       "categoria": "mobile"
+    },
+    {
+      "id": "e2639e67-e39e-46dd-a1e1-f0035c97dce7",
+      "titulo": "Como testar seu Front-end? com Mario Souto | #HipstersPontoTube",
+      "categoria": "front-end",
+      "capa": "https://i.ytimg.com/vi/CaTbfdsVydE/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAR3yiXpoQbLbDzj7OQTCDsf4D0PA",
+      "link": "https://www.youtube.com/watch?v=CaTbfdsVydE",
+      "descricao": "Por onde começar a testar as habilidades em Front-end? Se você tem dúvidas na hora de testar softwares e colocar em prática técnicas modernas, esse vídeo vai te ajudar."
     }
   ]
 }

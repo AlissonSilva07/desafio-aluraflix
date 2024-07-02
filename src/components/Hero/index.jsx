@@ -6,27 +6,47 @@ const HeroStyle = styled.section`
   display: flex;
   align-items: center;
   gap: 32px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const HeroImg = styled.img`
   width: 40%;
   border-radius: 6px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const HeroInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @media (max-width: 768px) {
+    align-items: center;
+  }
 `;
 
 const HeroTitle = styled.p`
   color: var(--bg-branco);
   font-size: 48px;
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 const HeroSubtitle = styled.p`
   color: var(--bg-cinza);
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 const HeroCategoria = styled.span`
@@ -55,7 +75,6 @@ function Hero({ video }) {
     <HeroStyle>
       <HeroImg src={video.capa} alt={video.titulo} />
       <HeroInfo>
-        <HeroTitle>{video.titulo}</HeroTitle>
         <HeroCategoria
           color={
             video.categoria === "front-end"
@@ -69,6 +88,8 @@ function Hero({ video }) {
         >
           {video.categoria}
         </HeroCategoria>
+        <HeroTitle>{video.titulo}</HeroTitle>
+
         <HeroSubtitle>{video.descricao}</HeroSubtitle>
         <Link to={video.link} target="_blank">
           <HeroButton>Assistir Agora</HeroButton>
