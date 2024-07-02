@@ -13,6 +13,8 @@ const FormLayout = styled.div`
 `;
 
 const TitleStyle = styled.h1`
+  display: flex;
+  flex-direction: column;
   color: var(--bg-branco);
 `;
 

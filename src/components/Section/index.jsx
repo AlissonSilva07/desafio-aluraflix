@@ -7,8 +7,16 @@ const SectionStyle = styled.section`
   gap: 32px;
 `;
 
-const SectionTitle = styled.h2`
+const SectionTitle = styled.div`
+  width: fit-content;
+  padding-bottom: 0.4rem;
+  display: flex;
+  flex-direction: column;
   color: var(--bg-branco);
+  font-size: 24px;
+  font-weight: bold;
+
+  border-bottom: 8px solid ${(props) => props.color};
 `;
 
 const CardsGroup = styled.div`
@@ -24,7 +32,19 @@ function Section({ videos, categoria }) {
     <SectionStyle>
       {videosCategoria.length > 0 && (
         <>
-          <SectionTitle>{categoria.toUpperCase()}</SectionTitle>
+          <SectionTitle
+            color={
+              categoria === "front-end"
+                ? "#155e75"
+                : categoria === "back-end"
+                ? "#86198f"
+                : categoria === "mobile"
+                ? "#3f6212"
+                : "white"
+            }
+          >
+            {categoria.toUpperCase()}
+          </SectionTitle>
           <CardsGroup>
             {videosCategoria.map((v) => (
               <Card
