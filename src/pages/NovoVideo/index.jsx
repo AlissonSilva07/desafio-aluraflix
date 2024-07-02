@@ -127,9 +127,11 @@ function NovoVideo() {
 
   const {
     register,
+    reset,
     formState: { errors },
     handleSubmit,
   } = useForm();
+
   const onSubmit = (data) => {
     console.log(data);
     postVideo(data)
@@ -213,7 +215,7 @@ function NovoVideo() {
         </InputGroup>
         <ButtonGroup>
           <ButtonGuardar type="submit">GUARDAR</ButtonGuardar>
-          <ButtonLimpar>LIMPAR</ButtonLimpar>
+          <ButtonLimpar onClick={() => reset()}>LIMPAR</ButtonLimpar>
         </ButtonGroup>
       </FormArea>
     </FormLayout>
