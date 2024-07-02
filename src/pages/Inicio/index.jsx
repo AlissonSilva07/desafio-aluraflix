@@ -3,7 +3,7 @@ import Hero from "../../components/Hero";
 import Section from "../../components/Section";
 import { useContext, useEffect, useState } from "react";
 import { useVideo } from "../../hooks/useVideos";
-import ModalEditarVideo from '../../components/ModalEditarVideo/index'
+import ModalEditarVideo from "../../components/ModalEditarVideo/index";
 import { ModalContext } from "../../context/ModalContext";
 
 const InicioStyle = styled.main`
@@ -17,19 +17,23 @@ const InicioStyle = styled.main`
 function Inicio() {
   const { getVideos } = useVideo();
   const [videos, setVideos] = useState([]);
-  const { showModal, idVideoEdit } = useContext(ModalContext)
+  const [oneVideo, setOneVideo] = useState();
+  const { showModal, idVideoEdit } = useContext(ModalContext);
 
   useEffect(() => {
     getVideos()
       .then((data) => {
-        setVideos(data);
+        if (data && data.length > 0) {
+          setVideos(data);
+          setOneVideo(data[0]);
+        }
       })
       .catch((err) => console.log(err));
   }, []);
 
   return (
     <InicioStyle>
-      <Hero />
+      {oneVideo && <Hero video={oneVideo} />}
       <Section videos={videos} categoria="front-end" />
       <Section videos={videos} categoria="back-end" />
       <Section videos={videos} categoria="mobile" />

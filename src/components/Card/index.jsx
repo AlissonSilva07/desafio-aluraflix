@@ -111,7 +111,7 @@ function Card({ unique, capa, titulo, link, descricao }) {
   return (
     <>
       <CardStyle>
-        <Link to={link}>
+        <Link to={link} target="_blank" rel="noopener noreferrer">
           <ImageContainer>
             <img src={capa} alt="" />
             <OverlayText>Abrir no Youtube</OverlayText>
