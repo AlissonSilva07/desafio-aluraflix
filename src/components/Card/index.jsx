@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { ModalContext } from "../../context/ModalContext";
 
-
 const CardStyle = styled.div`
   position: relative;
   width: 320px;
@@ -72,13 +71,12 @@ const IconStyle = styled.img`
 function Card({ unique, capa, titulo, descricao }) {
   const { deleteVideo } = useVideo();
   const navigate = useNavigate();
-  const { handleOpenModal } = useContext(ModalContext)
+  const { handleOpenModal } = useContext(ModalContext);
 
   const handleDelete = async (id) => {
     deleteVideo(id)
-      .then(data => {
-        console.log(data)
-        navigate("/")
+      .then((data) => {
+        window.location.reload()
       })
       .catch((err) => console.log(id, err));
   };
@@ -95,7 +93,11 @@ function Card({ unique, capa, titulo, descricao }) {
               <IconStyle src={IconDeletar} alt="Deletar" />
               DELETAR
             </CardButton>
-            <CardButton onClick={() => {handleOpenModal(unique)}}>
+            <CardButton
+              onClick={() => {
+                handleOpenModal(unique);
+              }}
+            >
               <IconStyle src={IconEditar} alt="Editar" />
               EDITAR
             </CardButton>

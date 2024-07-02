@@ -132,7 +132,7 @@ function NovoVideo() {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    postVideo(formData)
+    postVideo(data)
       .then((data) => {
         navigate("/");
       })
