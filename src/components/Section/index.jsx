@@ -22,14 +22,17 @@ const SectionTitle = styled.div`
 
 const CardsGroup = styled.div`
   width: 100%;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
 
-  overflow-x: scroll;
+  overflow-x: hidden;
 
   @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
     gap: 16px;
+    overflow-x: scroll;
   }
 `;
 
@@ -41,14 +44,18 @@ function Section({ videos, categoria }) {
   const handlePrev = () => {
     if (currentIndex.current > 0) {
       currentIndex.current -= 1;
-      cardsRef.current.style.transform = `translateX(-${currentIndex.current * 300}px)`;
+      cardsRef.current.style.transform = `translateX(-${
+        currentIndex.current * 300
+      }px)`;
     }
   };
 
   const handleNext = () => {
     if (currentIndex.current < cards.length - 1) {
       currentIndex.current += 1;
-      cardsRef.current.style.transform = `translateX(-${currentIndex.current * 300}px)`;
+      cardsRef.current.style.transform = `translateX(-${
+        currentIndex.current * 300
+      }px)`;
     }
   };
 
