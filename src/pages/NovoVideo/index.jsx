@@ -61,7 +61,7 @@ const SelectStyle = styled.select`
   padding: 0.8rem;
   display: flex;
   justify-content: center;
-  background-color: transparent;
+  background-color: var(--bg-black);
   color: var(--bg-branco);
   border: none;
   border-bottom: 2px solid var(--main-azul);
