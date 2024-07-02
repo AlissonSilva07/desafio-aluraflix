@@ -5,6 +5,7 @@ import { useVideo } from "../../hooks/useVideos";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { ModalContext } from "../../context/ModalContext";
+import { Link } from "react-router-dom";
 
 const CardStyle = styled.div`
   position: relative;
@@ -22,6 +23,32 @@ const CardInfoGroup = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
+`;
+
+const ImageContainer = styled.div`
+  position: relative;
+  display: inline-block;
+
+  &:hover img {
+    filter: brightness(60%);
+  }
+
+  &:hover div {
+    opacity: 1;
+  }
+`;
+
+const OverlayText = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 `;
 
 const CardTitle = styled.h3`
@@ -68,7 +95,7 @@ const IconStyle = styled.img`
   width: 18px;
 `;
 
-function Card({ unique, capa, titulo, descricao }) {
+function Card({ unique, capa, titulo, link, descricao }) {
   const { deleteVideo } = useVideo();
   const navigate = useNavigate();
   const { handleOpenModal } = useContext(ModalContext);
@@ -76,7 +103,7 @@ function Card({ unique, capa, titulo, descricao }) {
   const handleDelete = async (id) => {
     deleteVideo(id)
       .then((data) => {
-        window.location.reload()
+        window.location.reload();
       })
       .catch((err) => console.log(id, err));
   };
@@ -84,7 +111,12 @@ function Card({ unique, capa, titulo, descricao }) {
   return (
     <>
       <CardStyle>
-        <img src={capa} alt="" />
+        <Link to={link}>
+          <ImageContainer>
+            <img src={capa} alt="" />
+            <OverlayText>Abrir no Youtube</OverlayText>
+          </ImageContainer>
+        </Link>
         <CardInfoGroup>
           <CardTitle>{titulo}</CardTitle>
           <CardDescricao>{descricao}</CardDescricao>
