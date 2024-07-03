@@ -71,5 +71,5 @@ $ npx json-server src/db.json
 
 ## Desenvolvedores/Contribuintes :octocat:
 
-| [<img src="src="https://avatars.githubusercontent.com/u/5165335?v=4" width=115><br><sub>Alisson Rego</sub>](https://github.com/AlissonSilva07) |  
+| [<img src="https://avatars.githubusercontent.com/u/5165335?v=4" width=115><br><sub>Alisson Rego</sub>](https://github.com/AlissonSilva07) |  
 | :---: | :---: | :---: |
