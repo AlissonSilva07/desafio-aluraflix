@@ -1,8 +1,9 @@
 # Desafio Aluraflix
 
-<div align="center">
-    ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white)![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
-</div>
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white)
+![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 
 > Status do Projeto: :heavy_check_mark: Concluído
 
@@ -70,5 +71,5 @@ $ npx json-server src/db.json
 
 ## Desenvolvedores/Contribuintes :octocat:
 
-| [<img src="https://avatars.githubusercontent.com/u/5165335?v=4&size=64" width=115><br><sub>Alisson Rego</sub>](https://github.com/AlissonSilva07) |  
+| [<img src="src="https://avatars.githubusercontent.com/u/5165335?v=4" width=115><br><sub>Alisson Rego</sub>](https://github.com/AlissonSilva07) |  
 | :---: | :---: | :---: |
